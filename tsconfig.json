@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "esModuleInterop": true
+  },
+  "include": [
+    "**/*.ts",
+    "node_modules/jest-playwright-preset/types/global.d.ts"
+  ]
+}
