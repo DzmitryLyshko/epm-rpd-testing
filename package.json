@@ -2,16 +2,35 @@
   "name": "epm-rpd-testing",
   "version": "1.0.0",
   "description": "TAF for testing Report Portal Dashboards feature",
+  "jest": {
+    "verbose": true,
+    "preset": "jest-playwright-preset",
+    "testRegex": ".*/tests/(ui|api)/jest/.*\\.ts$",
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest"
+    },
+    "bail": true,
+    "maxWorkers": 3
+  },
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:pw": "npx playwright test tests/ui/pw/dashboard.spec.ts --workers=3",
+    "test:jest": "npx jest tests/ui/jest/dashboard.spec.ts --maxWorkers=3"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.42.1",
-    "@types/node": "^20.11.30"
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.30",
+    "jest": "^29.7.0",
+    "jest-playwright-preset": "^4.0.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "winston": "^3.13.0"
   }
 }
