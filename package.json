@@ -15,12 +15,14 @@
   "main": "index.js",
   "scripts": {
     "test:pw": "npx playwright test tests/ui/pw/dashboard.spec.ts --workers=3",
-    "test:jest": "npx jest tests/ui/jest/dashboard.spec.ts --maxWorkers=3"
+    "test:jest": "npx jest tests/ui/jest/dashboard.spec.ts --maxWorkers=3",
+    "test:cucumber": "npx cucumber-js --parallel 3 --require-module ts-node/register --require tests/ui/steps/**/*.ts tests/ui/features"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^10.5.1",
     "@playwright/test": "^1.42.1",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.30",
@@ -31,6 +33,7 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
     "winston": "^3.13.0"
   }
 }
