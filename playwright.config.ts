@@ -4,7 +4,7 @@ import { defineConfig, devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// require('dotenv').config();
+require('dotenv').config();
 
 export const BASE_URL = process.env.CI ? "https://rp.epam.com" : "http://localhost:8080";
 

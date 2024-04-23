@@ -1,5 +1,5 @@
 import { type Page } from '@playwright/test';
-import { BASE_URL } from '../../playwright.config';
+import { BASE_URL } from '../../../playwright.config';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Sidebar from '../components/sidebar';

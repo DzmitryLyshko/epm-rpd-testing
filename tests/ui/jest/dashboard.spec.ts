@@ -1,13 +1,13 @@
 import { chromium, Page, Browser } from 'playwright';
-import LoginPage from '../../../ui/pages/login.page';
-import HomePage from '../../../ui/pages/home.page';
-import DashboardsPage from '../../../ui/pages/dashboards.page';
-import WidgetsPage from '../../../ui/pages/widgets.page';
+import LoginPage from '../pages/login.page';
+import HomePage from '../pages/home.page';
+import DashboardsPage from '../pages/dashboards.page';
+import WidgetsPage from '../pages/widgets.page';
 
 describe('Dashboards', () => {
   const defaultUser = {
-    user: 'default',
-    password: '1q2w3e',
+    user: process.env.USER,
+    password: process.env.PASSWORD,
   }
   let dashboardName: string;
   let page: Page;

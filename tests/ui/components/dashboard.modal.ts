@@ -1,5 +1,5 @@
 import { Locator } from '@playwright/test';
-import Component from './component';
+import Component from './component'
 
 export default class DashboardModal extends Component {
   readonly nameInput: Locator;

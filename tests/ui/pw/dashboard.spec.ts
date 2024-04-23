@@ -2,8 +2,8 @@ import { test, expect } from './setup';
 
 test.describe('Dashboards', () => {
   const defaultUser = {
-    user: 'default',
-    password: '1q2w3e',
+    user: process.env.USER,
+    password: process.env.PASSWORD,
   }
   let dashboardName: string;
 
