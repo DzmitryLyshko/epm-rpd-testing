@@ -1,6 +1,5 @@
 import { APIRequestContext } from '@playwright/test';
 import { BASE_URL } from '../../../playwright.config';
-const token = 'Basic ' + Buffer.from('ui:uiman').toString('base64');
 
 export class DashboardModels {
   constructor(private request: APIRequestContext) { }
